@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: ConfigSever
+  profiles:
+    include: native
+  cloud:
+   config:
+      server:
+        native:
+         search-locations: classpath:config/
+
+info:
+  testmessage1: this is message from configserver's bootstrap.yml
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
