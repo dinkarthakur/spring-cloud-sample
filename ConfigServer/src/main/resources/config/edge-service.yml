@@ -1,0 +1,6 @@
+zuul:
+  ignoredServices: "*"
+  routes:
+    course1:
+      path: /ms/**
+      service-id: MICROSERVICE
